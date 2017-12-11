@@ -1,8 +1,13 @@
 $(document).ready(function(){
- var bitUrl = 'https://cors-anywhere.herokuapp.com/https://bittrex.com/api/v1.1/public/getmarketsummaries';
-    //Api pentru Bittrex
-        $.ajax({
-        url: bitUrl,
+    bittrex();
+    binance();
+    liqui();
+    getMarkets();
+})
+
+function bittrex() {
+    $.ajax({
+        url: 'https://cors-anywhere.herokuapp.com/https://bittrex.com/api/v1.1/public/getmarketsummaries',
         type: 'GET',
         success: function(coins) {
             var first = search("ETH-1ST", coins.result);
@@ -132,8 +137,9 @@ $(document).ready(function(){
             alert('FAILURE!');
         }
     }); 
-        
-    //Api pentru Binance
+}
+
+function binance() {
     $.ajax({
         type: 'GET',
         url: 'https://cors-anywhere.herokuapp.com/https://www.binance.com/api/v3/ticker/bookTicker',
@@ -265,8 +271,9 @@ $(document).ready(function(){
             alert('FAILURE!');
         }
     }); 
-        
-    //Api pentru Liqui
+}
+
+function liqui() {
     $.ajax({
         type: 'GET',
         url: 'https://cors-anywhere.herokuapp.com/https://api.liqui.io/api/3/ticker/adx_eth-ant_eth-bat_eth-bcc_eth-bnt_eth-cfi_eth-cvc_eth-dash_eth-dnt_eth-eng_eth-gno_eth-gnt_eth-gup_eth-ltc_eth-mana_eth-mco_eth-myst_eth-omg_eth-pay_eth-ptoy_eth-qrl_eth-rep_eth-rlc_eth-salt_eth-sngls_eth-snt_eth-storj_eth-time_eth-tkn_eth-trst_eth-waves_eth-wings_eth',
@@ -313,7 +320,7 @@ $(document).ready(function(){
             //$('#QTUM-Liqui').html(coins.qtum_eth.buy + ' - ' + coins.qtum_eth.sell);
             //$('#RCN-Liqui').html(coins.rcn_eth.buy + ' - ' + coins.rcn_eth.sell);
             $('#REP-Liqui').html(coins.rep_eth.buy + ' - ' + coins.rep_eth.sell);
-            $('#RLC-Liqui').html(coins.rlc_eth.buy + ' - ' + coins.rlc_eth.sellk);
+            $('#RLC-Liqui').html(coins.rlc_eth.buy + ' - ' + coins.rlc_eth.sell);
             $('#SALT-Liqui').html(coins.salt_eth.buy + ' - ' + coins.salt_eth.sell);
             //$('#SC-Liqui').html(coins.sc_eth.buy + ' - ' + coins.sc_eth.sell);
             $('#SNGLS-Liqui').html(coins.sngls_eth.buy + ' - ' + coins.sngls_eth.sell);
@@ -336,10 +343,11 @@ $(document).ready(function(){
         error: function() {
             alert('FAILURE!');
         }
-});  
-    
-    //Api pentru Bitfinex
-  /*  $.ajax({
+    });  
+}
+
+/*function bitfinex() {
+    $.ajax({
         type: 'GET',
         url: 'aici vine url',
         success: function(coins) {
@@ -351,8 +359,7 @@ $(document).ready(function(){
             alert('FAILURE!');
         }
     });
-*/
-})
+}*/
 
 function search(nameKey, myArray){
     for (var i=0; i < myArray.length; i++) {
@@ -369,3 +376,51 @@ function searchBinance(nameKey, myArray){
         }
     }
 }
+
+function hideRows() {
+
+}
+
+function myTimer() {
+    getMarkets();
+    console.log(' each 4 second...');
+}
+
+var myVar = setInterval(myTimer, 60000); 
+
+var savedCoins = ["BTC-1ST", "BTC-2GIVE", "BTC-ABY", "BTC-ADA", "BTC-ADT", "BTC-ADX", "BTC-AEON", "BTC-AGRS", "BTC-AMP", "BTC-ANT", "BTC-APX", "BTC-ARDR", "BTC-ARK", "BTC-AUR", "BTC-BAT", "BTC-BAY", "BTC-BCC", "BTC-BCY", "BTC-BITB", "BTC-BLITZ", "BTC-BLK", "BTC-BLOCK", "BTC-BNT", "BTC-BRK", "BTC-BRX", "BTC-BSD", "BTC-BTCD", "BTC-BTG", "BTC-BURST", "BTC-BYC", "BTC-CANN", "BTC-CFI", "BTC-CLAM", "BTC-CLOAK", "BTC-CLUB", "BTC-COVAL", "BTC-CPC", "BTC-CRB", "BTC-CRW", "BTC-CURE", "BTC-CVC", "BTC-DASH", "BTC-DCR", "BTC-DCT", "BTC-DGB", "BTC-DGD", "BTC-DMD", "BTC-DNT", "BTC-DOGE", "BTC-DOPE", "BTC-DTB", "BTC-DYN", "BTC-EBST", "BTC-EDG", "BTC-EFL", "BTC-EGC", "BTC-EMC", "BTC-EMC2", "BTC-ENG", "BTC-ENRG", "BTC-ERC", "BTC-ETC", "BTC-ETH", "BTC-EXCL", "BTC-EXP", "BTC-FAIR", "BTC-FCT", "BTC-FLDC", "BTC-FLO", "BTC-FTC", "BTC-FUN", "BTC-GAM", "BTC-GAME", "BTC-GBG", "BTC-GBYTE", "BTC-GCR", "BTC-GEO", "BTC-GLD", "BTC-GNO", "BTC-GNT", "BTC-GOLOS", "BTC-GRC", "BTC-GRS", "BTC-GUP", "BTC-HMQ", "BTC-INCNT", "BTC-INFX", "BTC-IOC", "BTC-ION", "BTC-IOP", "BTC-KMD", "BTC-KORE", "BTC-LBC", "BTC-LGD", "BTC-LMC", "BTC-LSK", "BTC-LTC", "BTC-LUN", "BTC-MAID", "BTC-MANA", "BTC-MCO", "BTC-MEME", "BTC-MER", "BTC-MLN", "BTC-MONA", "BTC-MTL", "BTC-MUE", "BTC-MUSIC", "BTC-MYST", "BTC-NAV", "BTC-NBT", "BTC-NEO", "BTC-NEOS", "BTC-NLG", "BTC-NMR", "BTC-NXC", "BTC-NXS", "BTC-NXT", "BTC-OK", "BTC-OMG", "BTC-OMNI", "BTC-PART", "BTC-PAY", "BTC-PDC", "BTC-PINK", "BTC-PIVX", "BTC-PKB", "BTC-POT", "BTC-POWR", "BTC-PPC", "BTC-PTC", "BTC-PTOY", "BTC-QRL", "BTC-QTUM", "BTC-QWARK", "BTC-RADS", "BTC-RBY", "BTC-RCN", "BTC-RDD", "BTC-REP", "BTC-RISE", "BTC-RLC", "BTC-SAFEX", "BTC-SALT", "BTC-SBD", "BTC-SC", "BTC-SEQ", "BTC-SHIFT", "BTC-SIB", "BTC-SLR", "BTC-SLS", "BTC-SNGLS", "BTC-SNRG", "BTC-SNT", "BTC-SPHR", "BTC-SPR", "BTC-START", "BTC-STEEM", "BTC-STORJ", "BTC-STRAT", "BTC-SWIFT", "BTC-SWT", "BTC-SYNX", "BTC-SYS", "BTC-THC", "BTC-TIX", "BTC-TKS", "BTC-TRIG", "BTC-TRST", "BTC-TRUST", "BTC-TX", "BTC-UBQ", "BTC-UNB", "BTC-VIA", "BTC-VIB", "BTC-VOX", "BTC-VRC", "BTC-VRM", "BTC-VTC", "BTC-VTR", "BTC-WAVES", "BTC-WINGS", "BTC-XAUR", "BTC-XCP", "BTC-XDN", "BTC-XEL", "BTC-XEM", "BTC-XLM", "BTC-XMG", "BTC-XMR", "BTC-XMY", "BTC-XRP", "BTC-XST", "BTC-XVC", "BTC-XVG", "BTC-XWC", "BTC-XZC", "BTC-ZCL", "BTC-ZEC", "BTC-ZEN","ETH-1ST", "ETH-ADA", "ETH-ADT", "ETH-ADX", "ETH-ANT", "ETH-BAT", "ETH-BCC", "ETH-BNT", "ETH-BTG", "ETH-BTS", "ETH-CFI", "ETH-CRB", "ETH-CVC", "ETH-DASH", "ETH-DGB", "ETH-DGD", "ETH-DNT", "ETH-ENG", "ETH-ETC", "ETH-FCT", "ETH-FUN", "ETH-GNO", "ETH-GNT", "ETH-GUP", "ETH-HMQ", "ETH-LGD", "ETH-LTC", "ETH-LUN", "ETH-MANA", "ETH-MCO", "ETH-MTL", "ETH-MYST", "ETH-NEO", "ETH-NMR", "ETH-OMG", "ETH-PAY", "ETH-POWR", "ETH-PTOY", "ETH-QRL", "ETH-QTUM", "ETH-RCN", "ETH-REP", "ETH-RLC", "ETH-SALT", "ETH-SC", "ETH-SNGLS", "ETH-SNT", "ETH-STORJ", "ETH-STRAT", "ETH-TIME", "ETH-TIX", "ETH-TKN", "ETH-TRST", "ETH-VIB", "ETH-WAVES", "ETH-WINGS", "ETH-XEM", "ETH-XLM", "ETH-XMR", "ETH-XRP", "ETH-ZEC", , "USDT-BCC", "USDT-BTC", "USDT-BTG", "USDT-DASH", "USDT-ETC", "USDT-ETH", "USDT-LTC", "USDT-NEO", "USDT-OMG", "USDT-XMR", "USDT-XRP", "USDT-ZEC"];
+
+function getMarkets() {
+    $.ajax({
+        url: 'https://cors-anywhere.herokuapp.com/https://bittrex.com/api/v1.1/public/getmarketsummaries',
+        type: 'GET',
+        success: function(coins) {
+            var markets = [];
+            $.each(coins.result, function(index, value) {
+                if(true) {
+                    markets.push(value.MarketName);
+                }
+                console.log(markets);
+            })
+            var currentCoins = markets;
+            var newCoins = [];
+            for(var i = 0; i < currentCoins.length; i++) {
+                if(!(savedCoins.contains(currentCoins[i]))){
+                    newCoins.push(currentCoins[i]);
+                }
+            }
+            for(var i = 0; i < newCoins.length; i++) {
+                $("#newCoins").empty();
+                $("#newCoins").val(newCoins);
+            }
+            console.log("every ten seconds...")
+        },
+        error: function() {
+            alert('FAILURE!');
+        }
+    }); 
+}
+
+Array.prototype.contains = function(element){
+    return this.indexOf(element) > -1;
+};
