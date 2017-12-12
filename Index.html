@@ -16,510 +16,830 @@
             <textarea id="newCoins" class="form-control">
             </textarea>
         </div>
-        <table class="table mt-5 table-striped">
+        <div>
+            <button onclick="showAllCoins()" class="btn btn-primary mt-3">Show All Coins</button>
+            <button onclick="hideUnimportant()" class="btn btn-primary mt-3">Show Deals</button>
+        </div>
+        <table class="table mt-5 table-striped table-bordered">
             <thead class="thead-inverse">
                 <tr>
-                    <th>Moneda</th>
-                    <th>Bittrex</th>
-                    <th>Binance</th>
-                    <th>Liqui</th>
-                    <th>Bitfinex</th>
-                    <th>ED</th>
+                    <th colspan="1">Moneda</th>
+                    <th colspan="2">Bittrex</th>
+                    <th colspan="2">Binance</th>
+                    <th colspan="2">Liqui</th>
+                    <th colspan="2">Bitfinex</th>
+                    <th colspan="2">ED</th>
                 </tr>
             </thead>
             <tbody>
-                <tr id="1ST">
+                <tr>
+                    <td></td>
+                    <th>Bid</th>
+                    <th>Sell</th>
+                    <th>Bid</th>
+                    <th>Sell</th>
+                    <th>Bid</th>
+                    <th>Sell</th>
+                    <th>Bid</th>
+                    <th>Sell</th>
+                    <th>Bid</th>
+                    <th>Sell</th>
+                </tr>
+                <tr  class="coin-row" id="ETH-1ST">
                     <th scope="row">1ST / ETH</th>
-                    <th id="1ST-Bittrex">tre api</th>
-                    <th id="1ST-Binance">tre api</th>
-                    <th id="1ST-Liqui">tre api</th>
-                    <th id="1ST-Bitfinex">tre api</th>
-                    <th id="1ST-ED">tre api</th>
+                    <th value="" id="ETH-1ST-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-1ST-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-1ST-Binance-bid">tre api</th>
+                    <th value="" id="ETH-1ST-Binance-sell">tre api</th>
+                    <th value="" id="ETH-1ST-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-1ST-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-1ST-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-1ST-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-1ST-ED-bid">tre api</th>
+                    <th value="" id="ETH-1ST-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-ADA">
                     <th scope="row">ADA / ETH</th>
-                    <th id="ADA-Bittrex">tre api</th>
-                    <th id="ADA-Binance">tre api</th>
-                    <th id="ADA-Liqui">tre api</th>
-                    <th id="ADA-Bitfinex">tre api</th>
-                    <th id="ADA-ED">tre api</th>
+                    <th value="" id="ETH-ADA-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-ADA-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-ADA-Binance-bid">tre api</th>
+                    <th value="" id="ETH-ADA-Binance-sell">tre api</th>
+                    <th value="" id="ETH-ADA-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-ADA-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-ADA-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-ADA-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-ADA-ED-bid">tre api</th>
+                    <th value="" id="ETH-ADA-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-ADT">
                     <th scope="row">ADT / ETH</th>
-                    <th id="ADT-Bittrex">tre api</th>
-                    <th id="ADT-Binance">tre api</th>
-                    <th id="ADT-Liqui">tre api</th>
-                    <th id="ADT-Bitfinex">tre api</th>
-                    <th id="ADT-ED">tre api</th>
+                    <th value="" id="ETH-ADT-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-ADT-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-ADT-Binance-bid">tre api</th>
+                    <th value="" id="ETH-ADT-Binance-sell">tre api</th>
+                    <th value="" id="ETH-ADT-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-ADT-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-ADT-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-ADT-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-ADT-ED-bid">tre api</th>
+                    <th value="" id="ETH-ADT-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-ADX">
                     <th scope="row">ADX / ETH</th>
-                    <th id="ADX-Bittrex">tre api</th>
-                    <th id="ADX-Binance">tre api</th>
-                    <th id="ADX-Liqui">tre api</th>
-                    <th id="ADX-Bitfinex">tre api</th>
-                    <th id="ADX-ED">tre api</th>
+                    <th value="" id="ETH-ADX-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-ADX-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-ADX-Binance-bid">tre api</th>
+                    <th value="" id="ETH-ADX-Binance-sell">tre api</th>
+                    <th value="" id="ETH-ADX-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-ADX-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-ADX-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-ADX-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-ADX-ED-bid">tre api</th>
+                    <th value="" id="ETH-ADX-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-ANT">
                     <th scope="row">ANT / ETH</th>
-                    <th id="ANT-Bittrex">tre api</th>
-                    <th id="ANT-Binance">tre api</th>
-                    <th id="ANT-Liqui">tre api</th>
-                    <th id="ANT-Bitfinex">tre api</th>
-                    <th id="ANT-ED">tre api</th>
+                    <th value="" id="ETH-ANT-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-ANT-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-ANT-Binance-bid">tre api</th>
+                    <th value="" id="ETH-ANT-Binance-sell">tre api</th>
+                    <th value="" id="ETH-ANT-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-ANT-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-ANT-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-ANT-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-ANT-ED-bid">tre api</th>
+                    <th value="" id="ETH-ANT-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-BAT">
                     <th scope="row">BAT / ETH</th>
-                    <th id="BAT-Bittrex">tre api</th>
-                    <th id="BAT-Binance">tre api</th>
-                    <th id="BAT-Liqui">tre api</th>
-                    <th id="BAT-Bitfinex">tre api</th>
-                    <th id="BAT-ED">tre api</th>
+                    <th value="" id="ETH-BAT-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-BAT-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-BAT-Binance-bid">tre api</th>
+                    <th value="" id="ETH-BAT-Binance-sell">tre api</th>
+                    <th value="" id="ETH-BAT-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-BAT-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-BAT-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-BAT-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-BAT-ED-bid">tre api</th>
+                    <th value="" id="ETH-BAT-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-BCC">
                     <th scope="row">BCC / ETH</th>
-                    <th id="BCC-Bittrex">tre api</th>
-                    <th id="BCC-Binance">tre api</th>
-                    <th id="BCC-Liqui">tre api</th>
-                    <th id="BCC-Bitfinex">tre api</th>
-                    <th id="BCC-ED">tre api</th>
+                    <th value="" id="ETH-BCC-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-BCC-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-BCC-Binance-bid">tre api</th>
+                    <th value="" id="ETH-BCC-Binance-sell">tre api</th>
+                    <th value="" id="ETH-BCC-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-BCC-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-BCC-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-BCC-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-BCC-ED-bid">tre api</th>
+                    <th value="" id="ETH-BCC-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-BNT">
                     <th scope="row">BNT / ETH</th>
-                    <th id="BNT-Bittrex">tre api</th>
-                    <th id="BNT-Binance">tre api</th>
-                    <th id="BNT-Liqui">tre api</th>
-                    <th id="BNT-Bitfinex">tre api</th>
-                    <th id="BNT-ED">tre api</th>
+                    <th value="" id="ETH-BNT-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-BNT-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-BNT-Binance-bid">tre api</th>
+                    <th value="" id="ETH-BNT-Binance-sell">tre api</th>
+                    <th value="" id="ETH-BNT-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-BNT-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-BNT-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-BNT-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-BNT-ED-bid">tre api</th>
+                    <th value="" id="ETH-BNT-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-BTG">
                     <th scope="row">BTG / ETH</th>
-                    <th id="BTG-Bittrex">tre api</th>
-                    <th id="BTG-Binance">tre api</th>
-                    <th id="BTG-Liqui">tre api</th>
-                    <th id="BTG-Bitfinex">tre api</th>
-                    <th id="BTG-ED">tre api</th>
+                    <th value="" id="ETH-BTG-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-BTG-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-BTG-Binance-bid">tre api</th>
+                    <th value="" id="ETH-BTG-Binance-sell">tre api</th>
+                    <th value="" id="ETH-BTG-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-BTG-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-BTG-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-BTG-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-BTG-ED-bid">tre api</th>
+                    <th value="" id="ETH-BTG-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-BTS">
                     <th scope="row">BTS / ETH</th>
-                    <th id="BTS-Bittrex">tre api</th>
-                    <th id="BTS-Binance">tre api</th>
-                    <th id="BTS-Liqui">tre api</th>
-                    <th id="BTS-Bitfinex">tre api</th>
-                    <th id="BTS-ED">tre api</th>
+                    <th value="" id="ETH-BTS-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-BTS-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-BTS-Binance-bid">tre api</th>
+                    <th value="" id="ETH-BTS-Binance-sell">tre api</th>
+                    <th value="" id="ETH-BTS-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-BTS-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-BTS-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-BTS-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-BTS-ED-bid">tre api</th>
+                    <th value="" id="ETH-BTS-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-CFI">
                     <th scope="row">CFI / ETH</th>
-                    <th id="CFI-Bittrex">tre api</th>
-                    <th id="CFI-Binance">tre api</th>
-                    <th id="CFI-Liqui">tre api</th>
-                    <th id="CFI-Bitfinex">tre api</th>
-                    <th id="CFI-ED">tre api</th>
+                    <th value="" id="ETH-CFI-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-CFI-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-CFI-Binance-bid">tre api</th>
+                    <th value="" id="ETH-CFI-Binance-sell">tre api</th>
+                    <th value="" id="ETH-CFI-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-CFI-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-CFI-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-CFI-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-CFI-ED-bid">tre api</th>
+                    <th value="" id="ETH-CFI-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-CRB">
                     <th scope="row">CRB / ETH</th>
-                    <th id="CRB-Bittrex">tre api</th>
-                    <th id="CRB-Binance">tre api</th>
-                    <th id="CRB-Liqui">tre api</th>
-                    <th id="CRB-Bitfinex">tre api</th>
-                    <th id="CRB-ED">tre api</th>
+                    <th value="" id="ETH-CRB-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-CRB-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-CRB-Binance-bid">tre api</th>
+                    <th value="" id="ETH-CRB-Binance-sell">tre api</th>
+                    <th value="" id="ETH-CRB-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-CRB-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-CRB-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-CRB-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-CRB-ED-bid">tre api</th>
+                    <th value="" id="ETH-CRB-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-CVC">
                     <th scope="row">CVC / ETH</th>
-                    <th id="CVC-Bittrex">tre api</th>
-                    <th id="CVC-Binance">tre api</th>
-                    <th id="CVC-Liqui">tre api</th>
-                    <th id="CVC-Bitfinex">tre api</th>
-                    <th id="CVC-ED">tre api</th>
+                    <th value="" id="ETH-CVC-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-CVC-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-CVC-Binance-bid">tre api</th>
+                    <th value="" id="ETH-CVC-Binance-sell">tre api</th>
+                    <th value="" id="ETH-CVC-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-CVC-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-CVC-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-CVC-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-CVC-ED-bid">tre api</th>
+                    <th value="" id="ETH-CVC-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-DASH">
                     <th scope="row">DASH / ETH</th>
-                    <th id="DASH-Bittrex">tre api</th>
-                    <th id="DASH-Binance">tre api</th>
-                    <th id="DASH-Liqui">tre api</th>
-                    <th id="DASH-Bitfinex">tre api</th>
-                    <th id="DASH-ED">tre api</th>
+                    <th value="" id="ETH-DASH-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-DASH-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-DASH-Binance-bid">tre api</th>
+                    <th value="" id="ETH-DASH-Binance-sell">tre api</th>
+                    <th value="" id="ETH-DASH-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-DASH-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-DASH-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-DASH-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-DASH-ED-bid">tre api</th>
+                    <th value="" id="ETH-DASH-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-DGB">
                     <th scope="row">DGB / ETH</th>
-                    <th id="DGB-Bittrex">tre api</th>
-                    <th id="DGB-Binance">tre api</th>
-                    <th id="DGB-Liqui">tre api</th>
-                    <th id="DGB-Bitfinex">tre api</th>
-                    <th id="DGB-ED">tre api</th>
+                    <th value="" id="ETH-DGB-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-DGB-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-DGB-Binance-bid">tre api</th>
+                    <th value="" id="ETH-DGB-Binance-sell">tre api</th>
+                    <th value="" id="ETH-DGB-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-DGB-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-DGB-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-DGB-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-DGB-ED-bid">tre api</th>
+                    <th value="" id="ETH-DGB-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-DGD">
                     <th scope="row">DGD / ETH</th>
-                    <th id="DGD-Bittrex">tre api</th>
-                    <th id="DGD-Binance">tre api</th>
-                    <th id="DGD-Liqui">tre api</th>
-                    <th id="DGD-Bitfinex">tre api</th>
-                    <th id="DGD-ED">tre api</th>
+                    <th value="" id="ETH-DGD-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-DGD-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-DGD-Binance-bid">tre api</th>
+                    <th value="" id="ETH-DGD-Binance-sell">tre api</th>
+                    <th value="" id="ETH-DGD-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-DGD-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-DGD-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-DGD-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-DGD-ED-bid">tre api</th>
+                    <th value="" id="ETH-DGD-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-DNT">
                     <th scope="row">DNT / ETH</th>
-                    <th id="DNT-Bittrex">tre api</th>
-                    <th id="DNT-Binance">tre api</th>
-                    <th id="DNT-Liqui">tre api</th>
-                    <th id="DNT-Bitfinex">tre api</th>
-                    <th id="DNT-ED">tre api</th>
+                    <th value="" id="ETH-DNT-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-DNT-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-DNT-Binance-bid">tre api</th>
+                    <th value="" id="ETH-DNT-Binance-sell">tre api</th>
+                    <th value="" id="ETH-DNT-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-DNT-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-DNT-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-DNT-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-DNT-ED-bid">tre api</th>
+                    <th value="" id="ETH-DNT-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-ENG">
                     <th scope="row">ENG / ETH</th>
-                    <th id="ENG-Bittrex">tre api</th>
-                    <th id="ENG-Binance">tre api</th>
-                    <th id="ENG-Liqui">tre api</th>
-                    <th id="ENG-Bitfinex">tre api</th>
-                    <th id="ENG-ED">tre api</th>
+                    <th value="" id="ETH-ENG-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-ENG-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-ENG-Binance-bid">tre api</th>
+                    <th value="" id="ETH-ENG-Binance-sell">tre api</th>
+                    <th value="" id="ETH-ENG-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-ENG-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-ENG-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-ENG-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-ENG-ED-bid">tre api</th>
+                    <th value="" id="ETH-ENG-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-ETC">
                     <th scope="row">ETC / ETH</th>
-                    <th id="ETC-Bittrex">tre api</th>
-                    <th id="ETC-Binance">tre api</th>
-                    <th id="ETC-Liqui">tre api</th>
-                    <th id="ETC-Bitfinex">tre api</th>
-                    <th id="ETC-ED">tre api</th>
+                    <th value="" id="ETH-ETC-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-ETC-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-ETC-Binance-bid">tre api</th>
+                    <th value="" id="ETH-ETC-Binance-sell">tre api</th>
+                    <th value="" id="ETH-ETC-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-ETC-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-ETC-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-ETC-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-ETC-ED-bid">tre api</th>
+                    <th value="" id="ETH-ETC-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-FCT">
                     <th scope="row">FCT / ETH</th>
-                    <th id="FCT-Bittrex">tre api</th>
-                    <th id="FCT-Binance">tre api</th>
-                    <th id="FCT-Liqui">tre api</th>
-                    <th id="FCT-Bitfinex">tre api</th>
-                    <th id="FCT-ED">tre api</th>
+                    <th value="" id="ETH-FCT-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-FCT-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-FCT-Binance-bid">tre api</th>
+                    <th value="" id="ETH-FCT-Binance-sell">tre api</th>
+                    <th value="" id="ETH-FCT-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-FCT-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-FCT-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-FCT-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-FCT-ED-bid">tre api</th>
+                    <th value="" id="ETH-FCT-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-FUN">
                     <th scope="row">FUN / ETH</th>
-                    <th id="FUN-Bittrex">tre api</th>
-                    <th id="FUN-Binance">tre api</th>
-                    <th id="FUN-Liqui">tre api</th>
-                    <th id="FUN-Bitfinex">tre api</th>
-                    <th id="FUN-ED">tre api</th>
+                    <th value="" id="ETH-FUN-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-FUN-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-FUN-Binance-bid">tre api</th>
+                    <th value="" id="ETH-FUN-Binance-sell">tre api</th>
+                    <th value="" id="ETH-FUN-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-FUN-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-FUN-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-FUN-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-FUN-ED-bid">tre api</th>
+                    <th value="" id="ETH-FUN-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-GNO">
                     <th scope="row">GNO / ETH</th>
-                    <th id="GNO-Bittrex">tre api</th>
-                    <th id="GNO-Binance">tre api</th>
-                    <th id="GNO-Liqui">tre api</th>
-                    <th id="GNO-Bitfinex">tre api</th>
-                    <th id="GNO-ED">tre api</th>
+                    <th value="" id="ETH-GNO-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-GNO-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-GNO-Binance-bid">tre api</th>
+                    <th value="" id="ETH-GNO-Binance-sell">tre api</th>
+                    <th value="" id="ETH-GNO-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-GNO-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-GNO-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-GNO-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-GNO-ED-bid">tre api</th>
+                    <th value="" id="ETH-GNO-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-GNT">
                     <th scope="row">GNT / ETH</th>
-                    <th id="GNT-Bittrex">tre api</th>
-                    <th id="GNT-Binance">tre api</th>
-                    <th id="GNT-Liqui">tre api</th>
-                    <th id="GNT-Bitfinex">tre api</th>
-                    <th id="GNT-ED">tre api</th>
+                    <th value="" id="ETH-GNT-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-GNT-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-GNT-Binance-bid">tre api</th>
+                    <th value="" id="ETH-GNT-Binance-sell">tre api</th>
+                    <th value="" id="ETH-GNT-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-GNT-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-GNT-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-GNT-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-GNT-ED-bid">tre api</th>
+                    <th value="" id="ETH-GNT-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-GUP">
                     <th scope="row">GUP / ETH</th>
-                    <th id="GUP-Bittrex">tre api</th>
-                    <th id="GUP-Binance">tre api</th>
-                    <th id="GUP-Liqui">tre api</th>
-                    <th id="GUP-Bitfinex">tre api</th>
-                    <th id="GUP-ED">tre api</th>
+                    <th value="" id="ETH-GUP-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-GUP-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-GUP-Binance-bid">tre api</th>
+                    <th value="" id="ETH-GUP-Binance-sell">tre api</th>
+                    <th value="" id="ETH-GUP-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-GUP-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-GUP-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-GUP-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-GUP-ED-bid">tre api</th>
+                    <th value="" id="ETH-GUP-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-HMQ">
                     <th scope="row">HMQ / ETH</th>
-                    <th id="HMQ-Bittrex">tre api</th>
-                    <th id="HMQ-Binance">tre api</th>
-                    <th id="HMQ-Liqui">tre api</th>
-                    <th id="HMQ-Bitfinex">tre api</th>
-                    <th id="HMQ-ED">tre api</th>
+                    <th value="" id="ETH-HMQ-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-HMQ-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-HMQ-Binance-bid">tre api</th>
+                    <th value="" id="ETH-HMQ-Binance-sell">tre api</th>
+                    <th value="" id="ETH-HMQ-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-HMQ-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-HMQ-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-HMQ-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-HMQ-ED-bid">tre api</th>
+                    <th value="" id="ETH-HMQ-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-LGD">
                     <th scope="row">LGD / ETH</th>
-                    <th id="LGD-Bittrex">tre api</th>
-                    <th id="LGD-Binance">tre api</th>
-                    <th id="LGD-Liqui">tre api</th>
-                    <th id="LGD-Bitfinex">tre api</th>
-                    <th id="LGD-ED">tre api</th>
+                    <th value="" id="ETH-LGD-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-LGD-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-LGD-Binance-bid">tre api</th>
+                    <th value="" id="ETH-LGD-Binance-sell">tre api</th>
+                    <th value="" id="ETH-LGD-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-LGD-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-LGD-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-LGD-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-LGD-ED-bid">tre api</th>
+                    <th value="" id="ETH-LGD-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-LTC">
                     <th scope="row">LTC / ETH</th>
-                    <th id="LTC-Bittrex">tre api</th>
-                    <th id="LTC-Binance">tre api</th>
-                    <th id="LTC-Liqui">tre api</th>
-                    <th id="LTC-Bitfinex">tre api</th>
-                    <th id="LTC-ED">tre api</th>
+                    <th value="" id="ETH-LTC-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-LTC-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-LTC-Binance-bid">tre api</th>
+                    <th value="" id="ETH-LTC-Binance-sell">tre api</th>
+                    <th value="" id="ETH-LTC-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-LTC-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-LTC-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-LTC-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-LTC-ED-bid">tre api</th>
+                    <th value="" id="ETH-LTC-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-LUN">
                     <th scope="row">LUN / ETH</th>
-                    <th id="LUN-Bittrex">tre api</th>
-                    <th id="LUN-Binance">tre api</th>
-                    <th id="LUN-Liqui">tre api</th>
-                    <th id="LUN-Bitfinex">tre api</th>
-                    <th id="LUN-ED">tre api</th>
+                    <th value="" id="ETH-LUN-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-LUN-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-LUN-Binance-bid">tre api</th>
+                    <th value="" id="ETH-LUN-Binance-sell">tre api</th>
+                    <th value="" id="ETH-LUN-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-LUN-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-LUN-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-LUN-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-LUN-ED-bid">tre api</th>
+                    <th value="" id="ETH-LUN-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-MANA">
                     <th scope="row">MANA / ETH</th>
-                    <th id="MANA-Bittrex">tre api</th>
-                    <th id="MANA-Binance">tre api</th>
-                    <th id="MANA-Liqui">tre api</th>
-                    <th id="MANA-Bitfinex">tre api</th>
-                    <th id="MANA-ED">tre api</th>
+                    <th value="" id="ETH-MANA-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-MANA-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-MANA-Binance-bid">tre api</th>
+                    <th value="" id="ETH-MANA-Binance-sell">tre api</th>
+                    <th value="" id="ETH-MANA-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-MANA-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-MANA-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-MANA-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-MANA-ED-bid">tre api</th>
+                    <th value="" id="ETH-MANA-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-MCO">
                     <th scope="row">MCO / ETH</th>
-                    <th id="MCO-Bittrex">tre api</th>
-                    <th id="MCO-Binance">tre api</th>
-                    <th id="MCO-Liqui">tre api</th>
-                    <th id="MCO-Bitfinex">tre api</th>
-                    <th id="MCO-ED">tre api</th>
+                    <th value="" id="ETH-MCO-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-MCO-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-MCO-Binance-bid">tre api</th>
+                    <th value="" id="ETH-MCO-Binance-sell">tre api</th>
+                    <th value="" id="ETH-MCO-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-MCO-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-MCO-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-MCO-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-MCO-ED-bid">tre api</th>
+                    <th value="" id="ETH-MCO-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-MTL">
                     <th scope="row">MTL / ETH</th>
-                    <th id="MTL-Bittrex">tre api</th>
-                    <th id="MTL-Binance">tre api</th>
-                    <th id="MTL-Liqui">tre api</th>
-                    <th id="MTL-Bitfinex">tre api</th>
-                    <th id="MTL-ED">tre api</th>
+                    <th value="" id="ETH-MTL-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-MTL-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-MTL-Binance-bid">tre api</th>
+                    <th value="" id="ETH-MTL-Binance-sell">tre api</th>
+                    <th value="" id="ETH-MTL-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-MTL-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-MTL-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-MTL-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-MTL-ED-bid">tre api</th>
+                    <th value="" id="ETH-MTL-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-MYST">
                     <th scope="row">MYST / ETH</th>
-                    <th id="MYST-Bittrex">tre api</th>
-                    <th id="MYST-Binance">tre api</th>
-                    <th id="MYST-Liqui">tre api</th>
-                    <th id="MYST-Bitfinex">tre api</th>
-                    <th id="MYST-ED">tre api</th>
+                    <th value="" id="ETH-MYST-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-MYST-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-MYST-Binance-bid">tre api</th>
+                    <th value="" id="ETH-MYST-Binance-sell">tre api</th>
+                    <th value="" id="ETH-MYST-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-MYST-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-MYST-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-MYST-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-MYST-ED-bid">tre api</th>
+                    <th value="" id="ETH-MYST-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-NEO">
                     <th scope="row">NEO / ETH</th>
-                    <th id="NEO-Bittrex">tre api</th>
-                    <th id="NEO-Binance">tre api</th>
-                    <th id="NEO-Liqui">tre api</th>
-                    <th id="NEO-Bitfinex">tre api</th>
-                    <th id="NEO-ED">tre api</th>
+                    <th value="" id="ETH-NEO-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-NEO-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-NEO-Binance-bid">tre api</th>
+                    <th value="" id="ETH-NEO-Binance-sell">tre api</th>
+                    <th value="" id="ETH-NEO-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-NEO-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-NEO-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-NEO-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-NEO-ED-bid">tre api</th>
+                    <th value="" id="ETH-NEO-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-NMR">
                     <th scope="row">NMR / ETH</th>
-                    <th id="NMR-Bittrex">tre api</th>
-                    <th id="NMR-Binance">tre api</th>
-                    <th id="NMR-Liqui">tre api</th>
-                    <th id="NMR-Bitfinex">tre api</th>
-                    <th id="NMR-ED">tre api</th>
+                    <th value="" id="ETH-NMR-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-NMR-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-NMR-Binance-bid">tre api</th>
+                    <th value="" id="ETH-NMR-Binance-sell">tre api</th>
+                    <th value="" id="ETH-NMR-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-NMR-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-NMR-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-NMR-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-NMR-ED-bid">tre api</th>
+                    <th value="" id="ETH-NMR-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-OMG">
                     <th scope="row">OMG / ETH</th>
-                    <th id="OMG-Bittrex">tre api</th>
-                    <th id="OMG-Binance">tre api</th>
-                    <th id="OMG-Liqui">tre api</th>
-                    <th id="OMG-Bitfinex">tre api</th>
-                    <th id="OMG-ED">tre api</th>
+                    <th value="" id="ETH-OMG-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-OMG-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-OMG-Binance-bid">tre api</th>
+                    <th value="" id="ETH-OMG-Binance-sell">tre api</th>
+                    <th value="" id="ETH-OMG-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-OMG-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-OMG-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-OMG-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-OMG-ED-bid">tre api</th>
+                    <th value="" id="ETH-OMG-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-PAY">
                     <th scope="row">PAY / ETH</th>
-                    <th id="PAY-Bittrex">tre api</th>
-                    <th id="PAY-Binance">tre api</th>
-                    <th id="PAY-Liqui">tre api</th>
-                    <th id="PAY-Bitfinex">tre api</th>
-                    <th id="PAY-ED">tre api</th>
+                    <th value="" id="ETH-PAY-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-PAY-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-PAY-Binance-bid">tre api</th>
+                    <th value="" id="ETH-PAY-Binance-sell">tre api</th>
+                    <th value="" id="ETH-PAY-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-PAY-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-PAY-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-PAY-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-PAY-ED-bid">tre api</th>
+                    <th value="" id="ETH-PAY-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-POWR">
                     <th scope="row">POWR / ETH</th>
-                    <th id="POWR-Bittrex">tre api</th>
-                    <th id="POWR-Binance">tre api</th>
-                    <th id="POWR-Liqui">tre api</th>
-                    <th id="POWR-Bitfinex">tre api</th>
-                    <th id="POWR-ED">tre api</th>
+                    <th value="" id="ETH-POWR-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-POWR-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-POWR-Binance-bid">tre api</th>
+                    <th value="" id="ETH-POWR-Binance-sell">tre api</th>
+                    <th value="" id="ETH-POWR-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-POWR-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-POWR-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-POWR-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-POWR-ED-bid">tre api</th>
+                    <th value="" id="ETH-POWR-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-PTOY">
                     <th scope="row">PTOY / ETH</th>
-                    <th id="PTOY-Bittrex">tre api</th>
-                    <th id="PTOY-Binance">tre api</th>
-                    <th id="PTOY-Liqui">tre api</th>
-                    <th id="PTOY-Bitfinex">tre api</th>
-                    <th id="PTOY-ED">tre api</th>
+                    <th value="" id="ETH-PTOY-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-PTOY-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-PTOY-Binance-bid">tre api</th>
+                    <th value="" id="ETH-PTOY-Binance-sell">tre api</th>
+                    <th value="" id="ETH-PTOY-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-PTOY-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-PTOY-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-PTOY-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-PTOY-ED-bid">tre api</th>
+                    <th value="" id="ETH-PTOY-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-QRL">
                     <th scope="row">QRL / ETH</th>
-                    <th id="QRL-Bittrex">tre api</th>
-                    <th id="QRL-Binance">tre api</th>
-                    <th id="QRL-Liqui">tre api</th>
-                    <th id="QRL-Bitfinex">tre api</th>
-                    <th id="QRL-ED">tre api</th>
+                    <th value="" id="ETH-QRL-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-QRL-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-QRL-Binance-bid">tre api</th>
+                    <th value="" id="ETH-QRL-Binance-sell">tre api</th>
+                    <th value="" id="ETH-QRL-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-QRL-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-QRL-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-QRL-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-QRL-ED-bid">tre api</th>
+                    <th value="" id="ETH-QRL-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-QTUM">
                     <th scope="row">QTUM / ETH</th>
-                    <th id="QTUM-Bittrex">tre api</th>
-                    <th id="QTUM-Binance">tre api</th>
-                    <th id="QTUM-Liqui">tre api</th>
-                    <th id="QTUM-Bitfinex">tre api</th>
-                    <th id="QTUM-ED">tre api</th>
+                    <th value="" id="ETH-QTUM-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-QTUM-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-QTUM-Binance-bid">tre api</th>
+                    <th value="" id="ETH-QTUM-Binance-sell">tre api</th>
+                    <th value="" id="ETH-QTUM-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-QTUM-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-QTUM-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-QTUM-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-QTUM-ED-bid">tre api</th>
+                    <th value="" id="ETH-QTUM-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-RCN">
                     <th scope="row">RCN / ETH</th>
-                    <th id="RCN-Bittrex">tre api</th>
-                    <th id="RCN-Binance">tre api</th>
-                    <th id="RCN-Liqui">tre api</th>
-                    <th id="RCN-Bitfinex">tre api</th>
-                    <th id="RCN-ED">tre api</th>
+                    <th value="" id="ETH-RCN-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-RCN-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-RCN-Binance-bid">tre api</th>
+                    <th value="" id="ETH-RCN-Binance-sell">tre api</th>
+                    <th value="" id="ETH-RCN-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-RCN-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-RCN-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-RCN-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-RCN-ED-bid">tre api</th>
+                    <th value="" id="ETH-RCN-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-REP">
                     <th scope="row">REP / ETH</th>
-                    <th id="REP-Bittrex">tre api</th>
-                    <th id="REP-Binance">tre api</th>
-                    <th id="REP-Liqui">tre api</th>
-                    <th id="REP-Bitfinex">tre api</th>
-                    <th id="REP-ED">tre api</th>
+                    <th value="" id="ETH-REP-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-REP-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-REP-Binance-bid">tre api</th>
+                    <th value="" id="ETH-REP-Binance-sell">tre api</th>
+                    <th value="" id="ETH-REP-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-REP-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-REP-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-REP-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-REP-ED-bid">tre api</th>
+                    <th value="" id="ETH-REP-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-RLC">
                     <th scope="row">RLC / ETH</th>
-                    <th id="RLC-Bittrex">tre api</th>
-                    <th id="RLC-Binance">tre api</th>
-                    <th id="RLC-Liqui">tre api</th>
-                    <th id="RLC-Bitfinex">tre api</th>
-                    <th id="RLC-ED">tre api</th>
+                    <th value="" id="ETH-RLC-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-RLC-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-RLC-Binance-bid">tre api</th>
+                    <th value="" id="ETH-RLC-Binance-sell">tre api</th>
+                    <th value="" id="ETH-RLC-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-RLC-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-RLC-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-RLC-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-RLC-ED-bid">tre api</th>
+                    <th value="" id="ETH-RLC-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-SALT">
                     <th scope="row">SALT / ETH</th>
-                    <th id="SALT-Bittrex">tre api</th>
-                    <th id="SALT-Binance">tre api</th>
-                    <th id="SALT-Liqui">tre api</th>
-                    <th id="SALT-Bitfinex">tre api</th>
-                    <th id="SALT-ED">tre api</th>
+                    <th value="" id="ETH-SALT-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-SALT-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-SALT-Binance-bid">tre api</th>
+                    <th value="" id="ETH-SALT-Binance-sell">tre api</th>
+                    <th value="" id="ETH-SALT-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-SALT-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-SALT-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-SALT-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-SALT-ED-bid">tre api</th>
+                    <th value="" id="ETH-SALT-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-SC">
                     <th scope="row">SC / ETH</th>
-                    <th id="SC-Bittrex">tre api</th>
-                    <th id="SC-Binance">tre api</th>
-                    <th id="SC-Liqui">tre api</th>
-                    <th id="SC-Bitfinex">tre api</th>
-                    <th id="SC-ED">tre api</th>
+                    <th value="" id="ETH-SC-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-SC-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-SC-Binance-bid">tre api</th>
+                    <th value="" id="ETH-SC-Binance-sell">tre api</th>
+                    <th value="" id="ETH-SC-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-SC-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-SC-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-SC-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-SC-ED-bid">tre api</th>
+                    <th value="" id="ETH-SC-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-SNGLS">
                     <th scope="row">SNGLS / ETH</th>
-                    <th id="SNGLS-Bittrex">tre api</th>
-                    <th id="SNGLS-Binance">tre api</th>
-                    <th id="SNGLS-Liqui">tre api</th>
-                    <th id="SNGLS-Bitfinex">tre api</th>
-                    <th id="SNGLS-ED">tre api</th>
+                    <th value="" id="ETH-SNGLS-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-SNGLS-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-SNGLS-Binance-bid">tre api</th>
+                    <th value="" id="ETH-SNGLS-Binance-sell">tre api</th>
+                    <th value="" id="ETH-SNGLS-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-SNGLS-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-SNGLS-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-SNGLS-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-SNGLS-ED-bid">tre api</th>
+                    <th value="" id="ETH-SNGLS-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-SNT">
                     <th scope="row">SNT / ETH</th>
-                    <th id="SNT-Bittrex">tre api</th>
-                    <th id="SNT-Binance">tre api</th>
-                    <th id="SNT-Liqui">tre api</th>
-                    <th id="SNT-Bitfinex">tre api</th>
-                    <th id="SNT-ED">tre api</th>
+                    <th value="" id="ETH-SNT-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-SNT-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-SNT-Binance-bid">tre api</th>
+                    <th value="" id="ETH-SNT-Binance-sell">tre api</th>
+                    <th value="" id="ETH-SNT-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-SNT-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-SNT-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-SNT-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-SNT-ED-bid">tre api</th>
+                    <th value="" id="ETH-SNT-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-STORJ">
                     <th scope="row">STORJ / ETH</th>
-                    <th id="STORJ-Bittrex">tre api</th>
-                    <th id="STORJ-Binance">tre api</th>
-                    <th id="STORJ-Liqui">tre api</th>
-                    <th id="STORJ-Bitfinex">tre api</th>
-                    <th id="STORJ-ED">tre api</th>
+                    <th value="" id="ETH-STORJ-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-STORJ-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-STORJ-Binance-bid">tre api</th>
+                    <th value="" id="ETH-STORJ-Binance-sell">tre api</th>
+                    <th value="" id="ETH-STORJ-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-STORJ-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-STORJ-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-STORJ-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-STORJ-ED-bid">tre api</th>
+                    <th value="" id="ETH-STORJ-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-STRAT">
                     <th scope="row">STRAT / ETH</th>
-                    <th id="STRAT-Bittrex">tre api</th>
-                    <th id="STRAT-Binance">tre api</th>
-                    <th id="STRAT-Liqui">tre api</th>
-                    <th id="STRAT-Bitfinex">tre api</th>
-                    <th id="STRAT-ED">tre api</th>
+                    <th value="" id="ETH-STRAT-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-STRAT-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-STRAT-Binance-bid">tre api</th>
+                    <th value="" id="ETH-STRAT-Binance-sell">tre api</th>
+                    <th value="" id="ETH-STRAT-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-STRAT-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-STRAT-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-STRAT-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-STRAT-ED-bid">tre api</th>
+                    <th value="" id="ETH-STRAT-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-TIME">
                     <th scope="row">TIME / ETH</th>
-                    <th id="TIME-Bittrex">tre api</th>
-                    <th id="TIME-Binance">tre api</th>
-                    <th id="TIME-Liqui">tre api</th>
-                    <th id="TIME-Bitfinex">tre api</th>
-                    <th id="TIME-ED">tre api</th>
+                    <th value="" id="ETH-TIME-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-TIME-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-TIME-Binance-bid">tre api</th>
+                    <th value="" id="ETH-TIME-Binance-sell">tre api</th>
+                    <th value="" id="ETH-TIME-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-TIME-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-TIME-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-TIME-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-TIME-ED-bid">tre api</th>
+                    <th value="" id="ETH-TIME-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-TIX">
                     <th scope="row">TIX / ETH</th>
-                    <th id="TIX-Bittrex">tre api</th>
-                    <th id="TIX-Binance">tre api</th>
-                    <th id="TIX-Liqui">tre api</th>
-                    <th id="TIX-Bitfinex">tre api</th>
-                    <th id="TIX-ED">tre api</th>
+                    <th value="" id="ETH-TIX-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-TIX-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-TIX-Binance-bid">tre api</th>
+                    <th value="" id="ETH-TIX-Binance-sell">tre api</th>
+                    <th value="" id="ETH-TIX-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-TIX-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-TIX-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-TIX-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-TIX-ED-bid">tre api</th>
+                    <th value="" id="ETH-TIX-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-TKN">
                     <th scope="row">TKN / ETH</th>
-                    <th id="TKN-Bittrex">tre api</th>
-                    <th id="TKN-Binance">tre api</th>
-                    <th id="TKN-Liqui">tre api</th>
-                    <th id="TKN-Bitfinex">tre api</th>
-                    <th id="TKN-ED">tre api</th>
+                    <th value="" id="ETH-TKN-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-TKN-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-TKN-Binance-bid">tre api</th>
+                    <th value="" id="ETH-TKN-Binance-sell">tre api</th>
+                    <th value="" id="ETH-TKN-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-TKN-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-TKN-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-TKN-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-TKN-ED-bid">tre api</th>
+                    <th value="" id="ETH-TKN-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-TRST">
                     <th scope="row">TRST / ETH</th>
-                    <th id="TRST-Bittrex">tre api</th>
-                    <th id="TRST-Binance">tre api</th>
-                    <th id="TRST-Liqui">tre api</th>
-                    <th id="TRST-Bitfinex">tre api</th>
-                    <th id="TRST-ED">tre api</th>
+                    <th value="" id="ETH-TRST-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-TRST-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-TRST-Binance-bid">tre api</th>
+                    <th value="" id="ETH-TRST-Binance-sell">tre api</th>
+                    <th value="" id="ETH-TRST-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-TRST-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-TRST-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-TRST-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-TRST-ED-bid">tre api</th>
+                    <th value="" id="ETH-TRST-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-VIB">
                     <th scope="row">VIB / ETH</th>
-                    <th id="VIB-Bittrex">tre api</th>
-                    <th id="VIB-Binance">tre api</th>
-                    <th id="VIB-Liqui">tre api</th>
-                    <th id="VIB-Bitfinex">tre api</th>
-                    <th id="VIB-ED">tre api</th>
+                    <th value="" id="ETH-VIB-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-VIB-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-VIB-Binance-bid">tre api</th>
+                    <th value="" id="ETH-VIB-Binance-sell">tre api</th>
+                    <th value="" id="ETH-VIB-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-VIB-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-VIB-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-VIB-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-VIB-ED-bid">tre api</th>
+                    <th value="" id="ETH-VIB-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-WAVES">
                     <th scope="row">WAVES / ETH</th>
-                    <th id="WAVES-Bittrex">tre api</th>
-                    <th id="WAVES-Binance">tre api</th>
-                    <th id="WAVES-Liqui">tre api</th>
-                    <th id="WAVES-Bitfinex">tre api</th>
-                    <th id="WAVES-ED">tre api</th>
+                    <th value="" id="ETH-WAVES-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-WAVES-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-WAVES-Binance-bid">tre api</th>
+                    <th value="" id="ETH-WAVES-Binance-sell">tre api</th>
+                    <th value="" id="ETH-WAVES-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-WAVES-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-WAVES-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-WAVES-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-WAVES-ED-bid">tre api</th>
+                    <th value="" id="ETH-WAVES-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-WINGS">
                     <th scope="row">WINGS / ETH</th>
-                    <th id="WINGS-Bittrex">tre api</th>
-                    <th id="WINGS-Binance">tre api</th>
-                    <th id="WINGS-Liqui">tre api</th>
-                    <th id="WINGS-Bitfinex">tre api</th>
-                    <th id="WINGS-ED">tre api</th>
+                    <th value="" id="ETH-WINGS-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-WINGS-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-WINGS-Binance-bid">tre api</th>
+                    <th value="" id="ETH-WINGS-Binance-sell">tre api</th>
+                    <th value="" id="ETH-WINGS-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-WINGS-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-WINGS-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-WINGS-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-WINGS-ED-bid">tre api</th>
+                    <th value="" id="ETH-WINGS-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-XEM">
                     <th scope="row">XEM / ETH</th>
-                    <th id="XEM-Bittrex">tre api</th>
-                    <th id="XEM-Binance">tre api</th>
-                    <th id="XEM-Liqui">tre api</th>
-                    <th id="XEM-Bitfinex">tre api</th>
-                    <th id="XEM-ED">tre api</th>
+                    <th value="" id="ETH-XEM-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-XEM-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-XEM-Binance-bid">tre api</th>
+                    <th value="" id="ETH-XEM-Binance-sell">tre api</th>
+                    <th value="" id="ETH-XEM-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-XEM-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-XEM-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-XEM-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-XEM-ED-bid">tre api</th>
+                    <th value="" id="ETH-XEM-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-XLM">
                     <th scope="row">XLM / ETH</th>
-                    <th id="XLM-Bittrex">tre api</th>
-                    <th id="XLM-Binance">tre api</th>
-                    <th id="XLM-Liqui">tre api</th>
-                    <th id="XLM-Bitfinex">tre api</th>
-                    <th id="XLM-ED">tre api</th>
+                    <th value="" id="ETH-XLM-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-XLM-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-XLM-Binance-bid">tre api</th>
+                    <th value="" id="ETH-XLM-Binance-sell">tre api</th>
+                    <th value="" id="ETH-XLM-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-XLM-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-XLM-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-XLM-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-XLM-ED-bid">tre api</th>
+                    <th value="" id="ETH-XLM-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-XMR">
                     <th scope="row">XMR / ETH</th>
-                    <th id="XMR-Bittrex">tre api</th>
-                    <th id="XMR-Binance">tre api</th>
-                    <th id="XMR-Liqui">tre api</th>
-                    <th id="XMR-Bitfinex">tre api</th>
-                    <th id="XMR-ED">tre api</th>
+                    <th value="" id="ETH-XMR-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-XMR-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-XMR-Binance-bid">tre api</th>
+                    <th value="" id="ETH-XMR-Binance-sell">tre api</th>
+                    <th value="" id="ETH-XMR-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-XMR-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-XMR-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-XMR-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-XMR-ED-bid">tre api</th>
+                    <th value="" id="ETH-XMR-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-XRP">
                     <th scope="row">XRP / ETH</th>
-                    <th id="XRP-Bittrex">tre api</th>
-                    <th id="XRP-Binance">tre api</th>
-                    <th id="XRP-Liqui">tre api</th>
-                    <th id="XRP-Bitfinex">tre api</th>
-                    <th id="XRP-ED">tre api</th>
+                    <th value="" id="ETH-XRP-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-XRP-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-XRP-Binance-bid">tre api</th>
+                    <th value="" id="ETH-XRP-Binance-sell">tre api</th>
+                    <th value="" id="ETH-XRP-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-XRP-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-XRP-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-XRP-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-XRP-ED-bid">tre api</th>
+                    <th value="" id="ETH-XRP-ED-sell">tre api</th>
                 </tr>
-                <tr>
+                <tr  class="coin-row" id="ETH-ZEC">
                     <th scope="row">ZEC / ETH</th>
-                    <th id="ZEC-Bittrex">tre api</th>
-                    <th id="ZEC-Binance">tre api</th>
-                    <th id="ZEC-Liqui">tre api</th>
-                    <th id="ZEC-Bitfinex">tre api</th>
-                    <th id="ZEC-ED">tre api</th>
+                    <th value="" id="ETH-ZEC-Bittrex-bid">tre api</th>
+                    <th value="" id="ETH-ZEC-Bittrex-sell">tre api</th>
+                    <th value="" id="ETH-ZEC-Binance-bid">tre api</th>
+                    <th value="" id="ETH-ZEC-Binance-sell">tre api</th>
+                    <th value="" id="ETH-ZEC-Liqui-bid">tre api</th>
+                    <th value="" id="ETH-ZEC-Liqui-sell">tre api</th>
+                    <th value="" id="ETH-ZEC-Bitfinex-bid">tre api</th>
+                    <th value="" id="ETH-ZEC-Bitfinex-sell">tre api</th>
+                    <th value="" id="ETH-ZEC-ED-bid">tre api</th>
+                    <th value="" id="ETH-ZEC-ED-sell">tre api</th>
                 </tr>
             </tbody>
         </table>
-        <button class="btn btn-primary mt-5 mr-auto ml-auto" onclick="LiquiApi();">Liqui</button>
-        <button class="btn btn-primary mt-5 mr-auto ml-auto" onclick="BinanceApi();">Binance</button>
     </div>
     <script src="jquery-2.2.4.min.js"></script>
     <script src="api-logic.js"></script>
