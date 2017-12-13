@@ -318,7 +318,7 @@ function bittrex() {
             $('#ETH-ZEC-Bittrex-sell').val(ZEC.Ask);
         },
         error: function() {
-            alert('FAILURE!');
+            alert('Eroare de la API-ul Bittrex!');
         }
     }); 
 }
@@ -636,7 +636,7 @@ function binance() {
             $('#ETH-ZEC-Binance-sell').val(ZEC.askPrice);
         },
         error: function() {
-            alert('FAILURE!');
+            alert('Erroare de la API-ul Binance!');
         }
     }); 
 }
@@ -893,7 +893,7 @@ function liqui() {
             //$('#ETH-ZEC-Liqui-sell').val(coins.zec_eth.sell);
         },
         error: function() {
-            alert('FAILURE!');
+            alert('Eroare de la API-ul Liqui!');
         }
     });  
 }
@@ -967,7 +967,7 @@ function getNewCoins() {
             }
         },
         error: function() {
-            alert('FAILURE!');
+            alert('Eroare de la API-ul care verifica monede noi!');
         }
     }); 
 }

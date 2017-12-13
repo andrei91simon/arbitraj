@@ -1,3 +1,13 @@
 tr {
     font-size: 9pt;
 }
+
+table, th, td {
+    border: 1px solid black;
+}
+
+@media (max-width: 575px) {
+    .ETH-Bitfinex-col, .ETH-ED-col {
+        display: none;
+    }
+}
